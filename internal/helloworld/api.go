@@ -1,10 +1,11 @@
 package helloworld
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"regexp"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 type HelloEndpoint struct {
@@ -36,7 +37,7 @@ func (he *HelloEndpoint) RegisterEndpoint(router *gin.Engine) {
 }
 
 func (he *HelloEndpoint) HelloWorld(c *gin.Context) {
-	c.JSON(200, "Félicitations, vous avez terminé l'initiation ! J'espère que le jeu de piste vous a plu.")
+	c.JSON(200, "Félicitations, vous avez terminé l'initiation ! J'espère que le jeu de piste vous a plu. Le code pour la suite est l'année de naissance de Alan Turing")
 }
 
 func (he *HelloEndpoint) NotResponse(c *gin.Context) {
